@@ -1,0 +1,15 @@
+{
+  "name" : "shoelace-ui-input",
+  "version" : "0.0.1",
+  "description" : "input variables",
+  "repository" : "https://github.com/shoelace-ui/input.git",
+  "keywords" : ["stylus","input", "inputs"],
+  "author" : "Michael Andrew Vanasse <mail@mndvns.com>",
+  "license" : "MIT"
+  "dependencies": {
+    "shoelace-ui-font-size": "git+https://github.com/shoelace-ui/font-size.git",
+    "shoelace-ui-line-height": "git+https://github.com/shoelace-ui/line-height.git",
+    "shoelace-ui-padding": "git+https://github.com/shoelace-ui/padding.git",
+    "shoelace-ui-gray": "git+https://github.com/shoelace-ui/gray.git"
+  }
+}

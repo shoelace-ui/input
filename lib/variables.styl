@@ -1,0 +1,71 @@
+/**
+ * Module dependencies
+ */
+
+@require 'shoelace-ui-font-size'
+@require 'shoelace-ui-line-height'
+@require 'shoelace-ui-padding'
+@require 'shoelace-ui-gray'
+
+/**
+ * Define `input` variables and placeholder
+ */
+
+input--color          ?= gray--darkest
+input--font-size-base ?= font-size--base
+
+input--bg          ?= white
+input--bg-disabled ?= gray--lighter
+
+input--border-width       ?= 1px
+input--border-color       ?= lighten(input--color, 50%)
+input--border-color-focus ?= lighten(input--color, 30%)
+input--border-radius      ?= 2px
+
+input--box-shadow       ?= inset 0 1px 1px rgba(0,0,0,.075)
+input--box-shadow-focus ?= inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px input--border-color-focus
+
+input--height-base  ?= (line-height--base-computed + ((padding--base-vertical + input--border-width) * 2))
+input--height-large ?= (line-height--large-computed + ((padding--large-vertical + input--border-width) * 2))
+input--height-small ?= (line-height--small-computed + ((padding--small-vertical + input--border-width) * 2))
+
+input--transition-properties ?= border-color box-shadow
+input--transition-duration   ?= 120ms
+input--transition-style      ?= ease-in-out
+
+$input--control
+  display block
+  box-sizing border-box
+  border-style solid
+  border-width input--border-width
+  border-color input--border-color
+  border-radius input--border-radius
+  background-color input--bg
+  color input--color
+  font-size input--font-size-base
+  height input--height-base
+  line-height line-height--base
+  padding padding--base-vertical padding--base-horizontal
+  vertical-align middle
+  width 100%
+  box-shadow input--box-shadow
+
+  transition-properties input--transition-properties
+  transition-duration input--transition-duration
+  transition-style input--transition-style
+
+  textarea&
+    height auto
+
+  &:focus
+
+    border-color input--border-color-focus
+    box-shadow input--box-shadow-focus
+
+    // disable outline
+    outline 0
+    outline-offset -2px
+
+textarea
+input[type="text"]
+  @extend $input--control
