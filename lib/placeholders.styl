@@ -1,0 +1,38 @@
+/**
+ * Module dependencies
+ */
+
+@require './variables'
+
+$input--control
+  display block
+  box-sizing border-box
+  border-style solid
+  border-width input--border-width
+  border-color input--border-color
+  border-radius input--border-radius
+  background-color input--bg
+  color input--color
+  font-size input--font-size-base
+  height input--height-base
+  line-height line-height--base
+  padding padding--base-vertical padding--base-horizontal
+  vertical-align middle
+  width 100%
+  box-shadow input--box-shadow
+
+  transition-properties input--transition-properties
+  transition-duration input--transition-duration
+  transition-style input--transition-style
+
+  textarea&
+    height auto
+
+  &:focus
+
+    border-color input--border-color-focus
+    box-shadow input--box-shadow-focus
+
+    // disable outline
+    outline 0
+    outline-offset -2px
