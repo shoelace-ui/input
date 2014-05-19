@@ -2,6 +2,7 @@
  * Module dependencies
  */
 
+@require 'shoelace-ui-duration'
 @require 'shoelace-ui-font-size'
 @require 'shoelace-ui-line-height'
 @require 'shoelace-ui-padding'
@@ -29,6 +30,6 @@ input--height-base  ?= (line-height--base-computed + ((padding--base-vertical + 
 input--height-large ?= (line-height--large-computed + ((padding--large-vertical + input--border-width) * 2))
 input--height-small ?= (line-height--small-computed + ((padding--small-vertical + input--border-width) * 2))
 
-input--transition-properties ?= border-color box-shadow
-input--transition-duration   ?= 120ms
-input--transition-style      ?= ease-in-out
+input--transition-property   ?= border-color box-shadow
+input--transition-duration   ?= duration--base
+input--transition-timing     ?= ease-in-out

@@ -7,6 +7,7 @@
   "author" : "Michael Andrew Vanasse <mail@mndvns.com>",
   "license" : "MIT",
   "dependencies": {
+    "shoelace-ui-duration": "git+https://github.com/shoelace-ui/duration.git",
     "shoelace-ui-font-size": "git+https://github.com/shoelace-ui/font-size.git",
     "shoelace-ui-line-height": "git+https://github.com/shoelace-ui/line-height.git",
     "shoelace-ui-padding": "git+https://github.com/shoelace-ui/padding.git",
