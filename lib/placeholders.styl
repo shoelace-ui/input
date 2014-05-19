@@ -25,6 +25,12 @@ $input--control
   transition-duration input--transition-duration
   transition-timing-function input--transition-timing
 
+  &[disabled]
+  &[readonly]
+  fieldset[disabled] &
+    cursor not-allowed
+    background-color input--bg-disabled
+
   &:focus
 
     border-color input--border-color-focus
