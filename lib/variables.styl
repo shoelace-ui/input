@@ -19,12 +19,12 @@ input--bg          ?= white
 input--bg-disabled ?= gray--lighter
 
 input--border-width       ?= 1px
-input--border-color       ?= lighten(input--color, 50%)
-input--border-color-focus ?= lighten(input--color, 30%)
+input--border-color       ?= desaturate(lighten(input--color, 70%), 90%)
+input--border-color-focus ?= desaturate(lighten(input--color, 60%), 90%)
 input--border-radius      ?= 2px
 
-input--box-shadow       ?= inset 0 1px 1px rgba(0,0,0,.075)
-input--box-shadow-focus ?= inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px input--border-color-focus
+input--box-shadow       ?= inset 0 1px 1px rgba(0,0,0, .055)
+input--box-shadow-focus ?= inset 0 1px 1px rgba(0,0,0, .055), 0 0 8px input--border-color-focus
 
 input--height-base  ?= (line-height--base-computed + ((padding--base-vertical + input--border-width) * 2))
 input--height-large ?= (line-height--large-computed + ((padding--large-vertical + input--border-width) * 2))
