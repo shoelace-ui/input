@@ -2,20 +2,8 @@
  * Module dependencies
  */
 
-@require './placeholders'
-
-input[type="text"]
-input[type="password"]
-input[type="datetime"]
-input[type="datetime-local"]
-input[type="date"]
-input[type="month"]
-input[type="time"]
-input[type="week"]
-input[type="number"]
-input[type="email"]
-input[type="url"]
-input[type="search"]
-input[type="tel"]
-input[type="color"]
-  @extend $input--control
+@require './variables'
+for key, val in input--apply
+  if lookup('input--apply-' + key) || val
+    {'input[type="' + key + '"]'}
+      @extend $input--control

@@ -3,23 +3,25 @@
  */
 
 @require './variables'
+@require 'shoelace-ui-padding'
 
 $input--control
-  display block
-  box-sizing border-box
-  border-style solid
-  border-width input--border-width
+  background-color input--bg
   border-color input--border-color
   border-radius input--border-radius
-  background-color input--bg
+  border-style solid
+  border-width input--border-width
+  box-shadow input--box-shadow
+  box-sizing border-box
   color input--color
+  display block
   font-size input--font-size-base
   height input--height-base
   line-height line-height--base
-  padding padding--base-vertical padding--base-horizontal
+  margin-bottom padding--base
+  padding padding--base padding--base
   vertical-align middle
   width 100%
-  box-shadow input--box-shadow
 
   transition-property input--transition-property
   transition-duration input--transition-duration
