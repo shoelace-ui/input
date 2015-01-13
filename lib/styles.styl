@@ -3,6 +3,8 @@
  */
 
 @require './variables'
+@require './placeholders'
+
 for key, val in input--apply
   if lookup('input--apply-' + key) || val
     {'input[type="' + key + '"]'}

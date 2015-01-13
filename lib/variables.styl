@@ -26,9 +26,9 @@ input--border-radius      ?= 2px
 input--box-shadow       ?= inset 0 1px 1px rgba(0,0,0, .055)
 input--box-shadow-focus ?= inset 0 1px 1px rgba(0,0,0, .055), 0 0 8px input--border-color-focus
 
-input--height-base  ?= (line-height--md-computed + ((padding--md + input--border-width) * 2))
-input--height-large ?= (line-height--lg-computed + ((padding--lg + input--border-width) * 2))
-input--height-small ?= (line-height--sm-computed + ((padding--sm + input--border-width) * 2))
+input--height-base  ?= round(line-height--md-computed + ((padding--md + input--border-width) * 2))
+input--height-large ?= round(line-height--lg-computed + ((padding--lg + input--border-width) * 2))
+input--height-small ?= round(line-height--sm-computed + ((padding--sm + input--border-width) * 2))
 
 input--transition-property   ?= border-color box-shadow
 input--transition-duration   ?= duration--base
@@ -37,18 +37,38 @@ input--transition-timing     ?= ease-in-out
 input--padding-y ?= padding--md
 input--padding-x ?= padding--lg
 
+/**
+ * Define default enabled types
+ */
+
 input--apply                ?= {}
-input--apply.text            = true
-input--apply.password        = false
-input--apply.datetime        = false
-input--apply.datetime-local  = false
-input--apply.date            = false
-input--apply.month           = false
-input--apply.time            = false
-input--apply.week            = false
-input--apply.number          = false
-input--apply.email           = false
-input--apply.url             = false
-input--apply.search          = false
-input--apply.tel             = false
-input--apply.color           = false
+if input--apply-all == true
+  input--apply.text            = true
+  input--apply.password        = true
+  input--apply.datetime        = true
+  input--apply.datetime-local  = true
+  input--apply.date            = true
+  input--apply.month           = true
+  input--apply.time            = true
+  input--apply.week            = true
+  input--apply.number          = true
+  input--apply.email           = true
+  input--apply.url             = true
+  input--apply.search          = true
+  input--apply.tel             = true
+  input--apply.color           = true
+else
+  input--apply.text            = true
+  input--apply.password        = false
+  input--apply.datetime        = false
+  input--apply.datetime-local  = false
+  input--apply.date            = false
+  input--apply.month           = false
+  input--apply.time            = false
+  input--apply.week            = false
+  input--apply.number          = false
+  input--apply.email           = false
+  input--apply.url             = false
+  input--apply.search          = false
+  input--apply.tel             = false
+  input--apply.color           = false
